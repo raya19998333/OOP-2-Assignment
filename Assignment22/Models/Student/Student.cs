@@ -8,29 +8,39 @@ namespace Assignment22.Models.Student
 {
     internal class Student
     {
+        // Properties of the Student class 
         private string name;
         private int id;
         private List<int> grades;
 
+        // Constructor to initialize the Student object
         public Student(string name, int id, List<int> grades)
         {
+            // Initialize properties
             this.name = name;
             this.id = id;
             this.grades = grades;
         }
+        // Method to add a grade to the student's grade list
         public int AddGrade(int grade)
         {
+            // Add the grade to the list
             grades.Add(grade);
+            // Return the added grade
             return grade;
         }
+        // Method to calculate the average grade of the student
         public double CalculateAverageGrade()
         {
+            // Check if there are no grades to avoid division by zero
             if (grades.Count == 0)
             {
                 return 0;
             }
+            // Calculate and return the average grade
             return grades.Average();
         }
+        // Method to print the student's report
         public void PrintStudentReport()
         {
             Console.WriteLine("---------------------------");

@@ -43,37 +43,41 @@ namespace Assignment22.Models.Product
         {
             return price * quantity;
         }
-
+        // Method to print product information
         public void PrintInfo()
         {
             Console.WriteLine($"Product: {Name}, Price: {Price}, Quantity: {Quantity}, Total: {CalculateTotal():F2}");
         }
     }
-
+    //Create a class Order that can contain a list of Products and calculate total cost for the order.
+    // Order class to manage multiple products
     class Order
     {
+        // List to hold products
         private List<Product> Products;
-
+        // Constructor
         public Order()
         {
             Products = new List<Product>();
         }
-
+        // Method to add a product to the order
         public void AddProduct(Product product)
         {
             Products.Add(product);
         }
-
+        // Method to calculate total order cost
         public double CalculateOrderTotal()
         {
+            // Using foreach loop to iterate through products
             double total = 0;
+           
             foreach (Product product in Products)
             {
                 total += product.CalculateTotal();
             }
             return total;
         }
-
+        // Method to print order summary
         public void PrintOrderSummary()
         {
             Console.WriteLine("Order Summary:");
