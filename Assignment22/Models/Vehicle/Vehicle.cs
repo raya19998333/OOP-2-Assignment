@@ -78,4 +78,5 @@ class Truck : Vehicle
         // Print load capacity
         Console.WriteLine($"Load Capacity: {LoadCapacity} tons");
     }
+    
 }

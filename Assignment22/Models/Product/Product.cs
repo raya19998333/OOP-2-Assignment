@@ -87,6 +87,10 @@ namespace Assignment22.Models.Product
             }
             Console.WriteLine($"Total Order Cost: {CalculateOrderTotal():F2}");
         }
+        public override string ToString()
+        {
+            return $"Order with {Products.Count} products, Total Cost: {CalculateOrderTotal():F2}";
+        }
     }
 
 }

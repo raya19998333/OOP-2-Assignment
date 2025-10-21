@@ -1,6 +1,7 @@
 ﻿using Assignment22.Models.Animal;
 using Assignment22.Models.BankAccount;
 using Assignment22.Models.Book;
+using Assignment22.Models.Employee;
 using Assignment22.Models.IDevice;
 using Assignment22.Models.Product;
 using Assignment22.Models.Student;
@@ -68,13 +69,13 @@ namespace Assignment22
 
             //Product and Order
             Console.WriteLine("\t\t\t E-Commerce Order System ");
-            Console.WriteLine(); 
+            Console.WriteLine();
             Console.WriteLine("Product Details:");
-           
-            Product p1= new Product("Laptop", 999.99, 2);
-            Product p2= new Product("Smartphone", 499.99, 3);
-           
-            Order order= new Order();
+
+            Product p1 = new Product("Laptop", 999.99, 2);
+            Product p2 = new Product("Smartphone", 499.99, 3);
+
+            Order order = new Order();
             order.AddProduct(p1);
             order.AddProduct(p2);
             Console.WriteLine("__________________________________________");
@@ -89,7 +90,7 @@ namespace Assignment22
             Console.WriteLine("__________________________________________");
             // Creating animal objects and making sounds
             Animal animal1 = new Dog("Buddy");
-            Animal animal3= new Dog("Max");
+            Animal animal3 = new Dog("Max");
             Animal animal2 = new Cat("Whiskers");
             Console.WriteLine();
             animal1.MakeSound();
@@ -126,16 +127,38 @@ namespace Assignment22
             Console.WriteLine("Device Status:");
             Console.WriteLine("__________________________________________");
             Light livingRoom = new Light();
-            Thermostat homeThermostat= new Thermostat();
-            Controller controller= new Controller();
+            Thermostat homeThermostat = new Thermostat();
+            Controller controller = new Controller();
             Console.WriteLine("Operating Light:");
             controller.OperatelDevice(livingRoom);
             Console.WriteLine("\nOperating Thermostat:");
             controller.OperatelDevice(homeThermostat);
 
+            //Employee Management System 
+            Console.WriteLine("\t\t\t Employee Management System ");
+            Console.WriteLine();
+            Console.WriteLine("This section is under development.");
 
 
 
-        }
-    }
+            try
+            {
+                // Create employees using polymorphism
+                List<Employee> employeeList = new List<Employee>()
+            {
+                new Manager("Ali", 8000),
+                new Developer("Sara", 6000),
+                new Employee("Omar", 4000)
+            };
+
+                // HR manages and prints bonuses
+                HR hr = new HR(employeeList);
+                hr.PrintEmployeeBonuses(employeeList);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+        } }
 }

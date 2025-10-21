@@ -17,6 +17,7 @@ namespace Assignment22.Models.IDevice
     //- LightBulb (on/off state, brightness level)
     class Light : IDevice
     {
+       
         private bool isOn;
         private int brightness;
         // Constructor to initialize default state
