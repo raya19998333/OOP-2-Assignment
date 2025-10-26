@@ -2,11 +2,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C%23-blue?style=for-the-badge" alt="C#">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/Concepts-OOP%20Fundamentals-lightgrey?style=for-the-badge" alt="OOP">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/Author-Raya_Al_Amri-blueviolet?style=for-the-badge" alt="Author">
 </p>
-
 ---
 
 ## 🗂️ Table of Contents
